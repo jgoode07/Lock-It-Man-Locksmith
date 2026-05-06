@@ -139,3 +139,68 @@ h3 {
   background: transparent;
   color: var(--color-primary);
 }
+
+/* =========================================================
+   SHARED LAYOUT
+========================================================= */
+
+.header__container,
+.hero__container,
+.why-us__container,
+.services__container,
+.trust-bar__container,
+.emergency-cta__container,
+.service-area__container,
+.footer__container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+/* ---------- HEADER ---------- */
+.header {
+  padding: 1.25rem var(--page-padding);
+  background: var(--color-bg-light);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-medium);
+}
+
+.header__logo {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: var(--space-medium);
+}
+
+.header__nav a {
+  text-decoration: none;
+}
+
+/* ---------- HERO ---------- */
+
+/* ---------- WHY US ---------- */
+
+/* ---------- SERVICES ---------- */
+
+/* ---------- TRUST BAR ---------- */
+
+/* ---------- EMERGENCY CTA ---------- */
+
+/* ---------- SERVICE AREA ---------- */
+
+/* ---------- FOOTER ---------- */
+
+/* =========================================================
+   MEDIA QUERIES
+========================================================= */
