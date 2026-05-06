@@ -188,6 +188,36 @@ h3 {
 }
 
 /* ---------- HERO ---------- */
+.hero__container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-large);
+}
+
+.hero__content {
+  max-width: 34rem;
+}
+
+.hero__title {
+  margin-bottom: var(--space-small);
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  color: var(--color-primary);
+}
+
+.hero__copy {
+  margin-bottom: var(--space-medium);
+  max-width: 40ch;
+}
+
+.hero__image {
+  min-height: 26rem; /* TEMP PLACEHOLDER */
+  border-radius: 1.5rem;
+  background: var(--color-sky);
+}
 
 /* ---------- WHY US ---------- */
 
