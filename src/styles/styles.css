@@ -1,0 +1,141 @@
+/* =========================================================
+   TOKENS
+========================================================= */
+
+:root {
+  /* Colours */
+  --color-navy: #061335;
+  --color-orange: #ca6038;
+  --color-gold: #efb64d;
+  --color-sky: #aedded;
+  --color-white: #f9f9f9;
+
+  --color-bg: #eef7f8;
+  --color-bg-light: #f9f9f9;
+  --color-bg-dark: #061335;
+
+  --color-text: #061335;
+  --color-text-muted: #536271;
+  --color-text-light: #f9f9f9;
+
+  --color-primary: #061335;
+  --color-secondary: #aedded;
+  --color-accent: #ca6038;
+  --color-highlight: #efb64d;
+
+  --color-border: rgba(6, 19, 53, 0.18);
+
+  /* Typography */
+  --font-primary: "Inter", Arial, Helvetica, sans-serif;
+
+  /* Layout */
+  --page-padding: 2rem;
+  --container-width: 72rem;
+
+  /* Spacing */
+  --space-small: 1rem;
+  --space-medium: 2rem;
+  --space-large: 4rem;
+  --space-xl: 6rem;
+
+  /* Effects */
+  --transition-speed: 220ms;
+}
+
+/* =========================================================
+   BASE / RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================================
+   GLOBAL LAYOUT
+========================================================= */
+
+.page {
+  overflow-x: hidden;
+}
+
+section {
+  padding: var(--space-xl) var(--page-padding);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.btn--secondary {
+  border-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
