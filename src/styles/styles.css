@@ -189,9 +189,6 @@ h3 {
 
 /* ---------- HERO ---------- */
 .hero__container {
-  width: min(100%, var(--container-width));
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -225,9 +222,6 @@ h3 {
 }
 
 .why-us__container {
-  width: min(100%, var(--container-width));
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-large);
@@ -261,6 +255,40 @@ h3 {
 }
 
 /* ---------- SERVICES ---------- */
+.services {
+  background: var(--color-bg);
+}
+
+.services__title {
+  margin-bottom: var(--space-large);
+  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+  color: var(--color-primary);
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-medium);
+}
+
+.service-card {
+  padding: var(--space-medium);
+  border-radius: 1.5rem;
+  background: var(--color-bg-light);
+}
+
+.service-card__image {
+  min-height: 12rem;
+  margin-bottom: var(--space-medium);
+  border-radius: 1rem;
+  background: var(--color-sky);
+}
+
+.service-card__title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
 
 /* ---------- TRUST BAR ---------- */
 
