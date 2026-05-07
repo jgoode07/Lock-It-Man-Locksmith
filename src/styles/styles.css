@@ -291,8 +291,45 @@ h3 {
 }
 
 /* ---------- TRUST BAR ---------- */
+.trust-bar {
+  background: var(--color-bg-light);
+}
+
+.trust-bar__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-medium);
+}
+
+.trust-bar p {
+  margin-bottom: 0;
+  padding: var(--space-medium);
+  border-radius: 1rem;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+}
 
 /* ---------- EMERGENCY CTA ---------- */
+.emergency-cta {
+  background: var(--color-bg);
+}
+
+.emergency-cta__container {
+  text-align: center;
+}
+
+.emergency-cta__title {
+  margin-bottom: var(--space-small);
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  color: var(--color-primary);
+}
+
+.emergency-cta__copy {
+  max-width: 42ch;
+  margin: 0 auto var(--space-medium);
+}
 
 /* ---------- SERVICE AREA ---------- */
 
