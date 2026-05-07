@@ -383,6 +383,81 @@ h3 {
 }
 
 /* ---------- FOOTER ---------- */
+.footer {
+  padding: var(--space-large) var(--page-padding) var(--space-medium);
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.footer__info {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: var(--space-large);
+}
+
+.footer__brand {
+  min-width: 12rem;
+}
+
+.footer__logo {
+  color: var(--color-text-light);
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer__contact,
+.footer__hours {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer__contact p,
+.footer__hours p {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.footer__emergency {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-highlight);
+}
+
+.footer__social {
+  margin-top: 0.35rem;
+}
+
+.footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(249, 249, 249, 0.1);
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition:
+    background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.footer__social a:hover {
+  background: var(--color-accent);
+}
+
+.footer__fine-print {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+}
 
 /* =========================================================
    MEDIA QUERIES
