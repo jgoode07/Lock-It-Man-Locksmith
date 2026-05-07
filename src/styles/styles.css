@@ -211,7 +211,7 @@ h3 {
 }
 
 .hero__image {
-  min-height: 26rem; /* TEMP PLACEHOLDER */
+  min-height: 26rem;
   border-radius: 1.5rem;
   background: var(--color-sky);
 }
@@ -332,6 +332,55 @@ h3 {
 }
 
 /* ---------- SERVICE AREA ---------- */
+.service-area {
+  background: var(--color-bg-light);
+}
+
+.service-area__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-large);
+}
+
+.service-area__content {
+  max-width: 32rem;
+}
+
+.service-area__title {
+  margin-bottom: var(--space-small);
+  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+  color: var(--color-primary);
+}
+
+.service-area__copy {
+  margin-bottom: var(--space-medium);
+}
+
+.service-area__list {
+  display: grid;
+  gap: 0.75rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-area__list li {
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.service-area__map {
+  min-height: 28rem;
+  border-radius: 1.5rem;
+  background: var(--color-sky);
+}
 
 /* ---------- FOOTER ---------- */
 
