@@ -199,12 +199,12 @@ h3 {
 }
 
 .hero__content {
-  max-width: 34rem;
+  max-width: 30rem;
 }
 
 .hero__title {
   margin-bottom: var(--space-small);
-  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-size: clamp(2.25rem, 4vw, 3rem);
   color: var(--color-primary);
 }
 
@@ -220,6 +220,45 @@ h3 {
 }
 
 /* ---------- WHY US ---------- */
+.why-us {
+  background: var(--color-bg-light);
+}
+
+.why-us__container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-large);
+  align-items: center;
+}
+
+.why-us__content {
+  max-width: 32rem;
+}
+
+.why-us__title {
+  margin-bottom: var(--space-small);
+  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+  color: var(--color-primary);
+}
+
+.why-us__copy {
+  max-width: 42ch;
+}
+
+.why-us__media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-medium);
+}
+
+.why-us__card {
+  min-height: 14rem;
+  border-radius: 1.25rem;
+  background: var(--color-sky);
+}
 
 /* ---------- SERVICES ---------- */
 
