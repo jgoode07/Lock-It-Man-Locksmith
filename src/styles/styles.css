@@ -464,13 +464,26 @@ h3 {
 
 /* ---------- SERVICES ---------- */
 .services {
-  background: var(--color-bg);
+  background: var(--color-bg-light);
+}
+
+.services__eyebrow {
+  margin-bottom: var(--space-small);
+
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .services__title {
+  max-width: 46rem;
   margin-bottom: var(--space-large);
-  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+
   color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.035em;
 }
 
 .services__list {
@@ -480,22 +493,53 @@ h3 {
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 18rem;
   padding: var(--space-medium);
+  border: 0.5px solid var(--color-border);
   border-radius: 1.5rem;
+
   background: var(--color-bg-light);
+
+  transition:
+    transform var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
 }
 
-.service-card__image {
-  min-height: 12rem;
+.service-card:hover {
+  transform: translateY(-0.35rem);
+  border-color: rgba(6, 19, 53, 0.32);
+}
+
+.service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  aspect-ratio: 1;
   margin-bottom: var(--space-medium);
-  border-radius: 1rem;
+  border-radius: 50%;
+
   background: var(--color-sky);
+  color: var(--color-primary);
+  font-size: 1.2rem;
 }
 
 .service-card__title {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: var(--space-small);
+
   color: var(--color-primary);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  letter-spacing: -0.025em;
+}
+
+.service-card__copy {
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
 }
 
 /* ---------- TRUST BAR ---------- */
@@ -736,6 +780,11 @@ h3 {
     max-width: 80%;
     display: block;
   }
+
+  /* --- SERVICES --- */
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ---------- MOBILE ---------- */
@@ -769,5 +818,15 @@ h3 {
   .why-us__dots {
     left: var(--space-medium);
     bottom: var(--space-medium);
+  }
+
+  /* --- SERVICES --- */
+  .services__list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    align-items: center;
+    text-align: center;
   }
 }
