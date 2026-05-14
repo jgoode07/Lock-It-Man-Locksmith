@@ -62,6 +62,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-primary);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img {
@@ -77,10 +78,6 @@ a {
 /* =========================================================
    GLOBAL LAYOUT
 ========================================================= */
-
-.page {
-  overflow-x: hidden;
-}
 
 section {
   padding: var(--space-xl) var(--page-padding);
@@ -162,29 +159,41 @@ h3 {
 
 /* ---------- HEADER ---------- */
 .header {
-  padding: 1.25rem var(--page-padding);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  padding: 1rem var(--page-padding);
   background: var(--color-bg-light);
 }
 
 .header__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-medium);
 }
 
 .header__logo {
+  color: var(--color-primary);
   font-weight: 800;
   text-decoration: none;
 }
 
 .header__nav {
   display: flex;
+  justify-content: center;
   gap: var(--space-large);
 }
 
 .header__nav a {
+  color: var(--color-primary);
+  font-weight: 500;
   text-decoration: none;
+}
+
+.header .btn {
+  justify-self: end;
 }
 
 /* ---------- HERO ---------- */
@@ -259,24 +268,29 @@ h3 {
 }
 
 .hero__trust {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-medium);
 
-  width: min(100%, 46rem);
+  width: min(100%, 42rem);
   margin: 0 auto;
 }
 
 .hero__trust p {
   margin: 0;
-  padding: 1rem;
+  padding-left: var(--space-medium);
 
-  border: 1px solid rgba(249, 249, 249, 0.14);
-  border-radius: 1rem;
-  background: rgba(249, 249, 249, 0.06);
+  border-left: 1px solid rgba(249, 249, 249, 0.28);
 
   color: var(--color-text-light);
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero__trust p:first-child {
+  padding-left: 0;
+  border-left: none;
 }
 
 /* ---------- WHY US ---------- */
@@ -525,3 +539,34 @@ h3 {
 /* =========================================================
    MEDIA QUERIES
 ========================================================= */
+/* ---------- TABLET ---------- */
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-small);
+  }
+
+  .hero {
+    min-height: auto;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__trust {
+    grid-template-columns: 1fr;
+  }
+}
