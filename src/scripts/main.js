@@ -1,4 +1,5 @@
-// Carousel for "Why Us" section
+/* ---------- WHY US CAROUSEL ---------- */
+
 const whyUsSlides = document.querySelectorAll(".why-us__slide");
 const whyUsDots = document.querySelectorAll(".why-us__dot");
 
@@ -34,3 +35,24 @@ setInterval(() => {
 
   showWhyUsSlide(nextSlide);
 }, 4500);
+
+/* ---------- WHY US POINT FADE-IN ---------- */
+
+const whyUsPoints = document.querySelectorAll(".why-us__point");
+const whyUsPointObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("why-us__point--visible");
+        whyUsPointObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.25,
+  },
+);
+
+whyUsPoints.forEach((point) => {
+  whyUsPointObserver.observe(point);
+});

@@ -348,17 +348,12 @@ h3 {
   color: var(--color-text-muted);
 }
 
-.why-us__media {
-  display: flex;
-  justify-content: center;
-}
-
 .why-us__carousel {
   position: relative;
 
   width: min(100%, 30rem);
   min-height: 18rem;
-  margin-top: 2rem;
+  margin-top: var(--space-small);
   padding: var(--space-small);
 }
 
@@ -427,6 +422,44 @@ h3 {
 
 .why-us__dot--active {
   background: var(--color-highlight);
+}
+
+/* Mobile/Tablet only fade-in section  */
+.why-us__points {
+  display: none;
+}
+
+.why-us__point {
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-highlight);
+
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity 1100ms ease,
+    transform 1100ms ease;
+}
+
+.why-us__point + .why-us__point {
+  margin-top: var(--space-medium);
+}
+
+.why-us__point--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-us__point-title {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-primary);
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+}
+
+.why-us__point p {
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
 }
 
 /* ---------- SERVICES ---------- */
@@ -683,6 +716,25 @@ h3 {
 
   .why-us__media {
     justify-content: center;
+  }
+
+  /* Tablet/Mobile only fade-in section  */
+  .why-us__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+  }
+
+  .why-us__content {
+    max-width: 62rem;
+  }
+
+  .why-us__carousel {
+    display: none;
+  }
+
+  .why-us__points {
+    max-width: 80%;
+    display: block;
   }
 }
 
