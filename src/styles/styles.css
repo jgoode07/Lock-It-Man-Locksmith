@@ -62,7 +62,6 @@ body {
   color: var(--color-text);
   font-family: var(--font-primary);
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 img {
@@ -574,7 +573,7 @@ h3 {
   }
 
   .hero__eyebrow {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     letter-spacing: 0.14rem;
   }
 
@@ -591,9 +590,15 @@ h3 {
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 480px) {
+  .hero {
+    padding-top: var(--space-large);
+    padding-bottom: var(--space-large);
+  }
+
   .hero__actions {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2.75rem;
   }
 
   .hero__actions .btn {
