@@ -207,7 +207,10 @@ h3 {
 
 /* ---------- HERO ---------- */
 .hero {
-  min-height: calc(100vh - 5.5rem);
+  min-height: calc(100vh - 5rem);
+  padding-top: var(--space-large);
+  padding-bottom: var(--space-large);
+
   display: flex;
   align-items: center;
 
@@ -240,17 +243,17 @@ h3 {
 }
 
 .hero__title {
-  margin: 0 auto 1.35rem;
+  margin: 0 auto 1.75rem;
 
   color: var(--color-text-light);
-  font-size: clamp(2.25rem, 8vw, 5rem);
+  font-size: clamp(2.25rem, 8vw, 4rem);
   line-height: 0.95;
   letter-spacing: -0.045em;
 }
 
 .hero__copy {
   max-width: 80%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
 
   color: rgba(249, 249, 249, 0.82);
   font-size: clamp(1rem, 1.5vw, 1.2rem);
@@ -310,6 +313,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
+
+  margin-top: var(--space-small);
   align-items: center;
 }
 
@@ -344,7 +349,7 @@ h3 {
 
   width: min(100%, 30rem);
   min-height: 18rem;
-  margin-top: var(--space-small);
+  margin-top: var(--space-medium);
   padding: var(--space-small);
 }
 
@@ -390,7 +395,7 @@ h3 {
 
 .why-us__slide-copy {
   margin-bottom: 0;
-  max-width: 26ch;
+  max-width: 30ch;
   color: var(--color-text-muted);
   font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
@@ -509,14 +514,14 @@ h3 {
   align-items: center;
   justify-content: center;
 
-  width: 3rem;
+  width: 3.4rem;
   aspect-ratio: 1;
-  margin-bottom: var(--space-medium);
+  margin-bottom: 1.5rem;
   border-radius: 50%;
 
   background: var(--color-sky);
   color: var(--color-primary);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 
 .service-card__title {
@@ -535,7 +540,7 @@ h3 {
 
 /* ---------- TRUST BAR ---------- */
 .trust-bar {
-  padding: 0 var(--page-padding) var(--space-large);
+  padding: 0 var(--page-padding) var(--space-xl);
   background: var(--color-bg-light);
 }
 
@@ -722,7 +727,7 @@ h3 {
 
 /* ---------- FOOTER ---------- */
 .footer {
-  padding: var(--space-large) var(--page-padding) var(--space-medium);
+  padding: var(--space-xl) var(--page-padding) var(--space-medium);
   background: var(--color-bg-dark);
   color: rgba(249, 249, 249, 0.82);
 }
@@ -730,7 +735,6 @@ h3 {
 .footer__container {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  align-items: center;
   gap: clamp(3rem, 6vw, 6rem);
 }
 
