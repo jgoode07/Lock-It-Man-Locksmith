@@ -8,6 +8,7 @@
   --color-orange: #ca6038;
   --color-gold: #efb64d;
   --color-sky: #aedded;
+  --color-sky-light: #f6f9fc;
   --color-white: #f9f9f9;
 
   --color-bg: #eef7f8;
@@ -544,6 +545,7 @@ h3 {
 
 /* ---------- TRUST BAR ---------- */
 .trust-bar {
+  padding: 0 var(--page-padding) var(--space-large);
   background: var(--color-bg-light);
 }
 
@@ -554,35 +556,63 @@ h3 {
 }
 
 .trust-bar p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+
   margin-bottom: 0;
-  padding: var(--space-medium);
-  border-radius: 1rem;
-  background: var(--color-bg);
+  padding: 1.25rem;
+
   color: var(--color-primary);
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
 }
 
 /* ---------- EMERGENCY CTA ---------- */
 .emergency-cta {
-  background: var(--color-bg);
+  background:
+    radial-gradient(circle at top, rgba(174, 221, 221, 0.1), transparent 45%),
+    linear-gradient(180deg, var(--color-navy) 0%, #081a47 100%);
+
+  color: var(--color-text-light);
 }
 
 .emergency-cta__container {
+  max-width: 52rem;
   text-align: center;
+}
+
+.emergency-cta__eyebrow {
+  margin-bottom: var(--space-small);
+
+  color: var(--color-highlight);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .emergency-cta__title {
   margin-bottom: var(--space-small);
-  font-size: clamp(1.75rem, 3vw, 3rem);
-  color: var(--color-primary);
+
+  color: var(--color-text-light);
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  letter-spacing: -0.035em;
 }
 
 .emergency-cta__copy {
-  max-width: 42ch;
+  max-width: 46rem;
   margin: 0 auto var(--space-medium);
+
+  color: rgba(249, 249, 249, 0.82);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
 
+.emergency-cta .btn--primary {
+  background: var(--color-highlight);
+  color: var(--color-navy);
+}
 /* ---------- SERVICE AREA ---------- */
 .service-area {
   background: var(--color-bg-light);
@@ -785,6 +815,22 @@ h3 {
   .services__list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* --- TRUST BAR --- */
+  .trust-bar p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+
+    margin-bottom: 0;
+    padding: 1.25rem 0.75rem;
+
+    color: var(--color-primary);
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+    font-weight: 800;
+    text-align: center;
+  }
 }
 
 /* ---------- MOBILE ---------- */
@@ -828,5 +874,21 @@ h3 {
   .service-card {
     align-items: center;
     text-align: center;
+  }
+
+  /* --- TRUST BAR --- */
+  .trust-bar {
+    padding: 0 var(--page-padding) var(--space-xl);
+  }
+
+  .trust-bar__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+  }
+
+  .trust-bar p {
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 0;
   }
 }
