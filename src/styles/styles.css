@@ -613,6 +613,7 @@ h3 {
   background: var(--color-highlight);
   color: var(--color-navy);
 }
+
 /* ---------- SERVICE AREA ---------- */
 .service-area {
   background: var(--color-bg-light);
@@ -620,28 +621,42 @@ h3 {
 
 .service-area__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
-  gap: var(--space-large);
+  gap: var(--space-xl);
 }
 
 .service-area__content {
-  max-width: 32rem;
+  max-width: 34rem;
+}
+
+.service-area__eyebrow {
+  margin-bottom: var(--space-small);
+
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .service-area__title {
   margin-bottom: var(--space-small);
-  font-size: clamp(1.15rem, 2.5vw, 1.85rem);
+
   color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.035em;
 }
 
 .service-area__copy {
   margin-bottom: var(--space-medium);
+
+  color: var(--color-text-muted);
 }
 
 .service-area__list {
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-small);
 
   margin: 0;
   padding: 0;
@@ -650,18 +665,69 @@ h3 {
 }
 
 .service-area__list li {
-  padding: 1rem 1.25rem;
-  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-small);
 
-  background: var(--color-bg);
+  padding-left: var(--space-small);
+  border-left: 3px solid var(--color-highlight);
+
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 800;
+}
+
+.service-area__list span {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
 .service-area__map {
-  min-height: 28rem;
+  min-height: 30rem;
+  display: flex;
+  align-items: flex-end;
+
+  padding: var(--space-medium);
   border-radius: 1.5rem;
-  background: var(--color-sky);
+
+  background: url("../assets/img/alberta-map.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service-area__map-card {
+  max-width: 22rem;
+  padding: var(--space-medium);
+  border-radius: 1.25rem;
+
+  background: rgba(249, 249, 249, 0.94);
+}
+
+.service-area__map-label {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.service-area__map-title {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-primary);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.service-area__map-copy {
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
 }
 
 /* ---------- FOOTER ---------- */
@@ -831,6 +897,20 @@ h3 {
     font-weight: 800;
     text-align: center;
   }
+
+  /* --- SERVICE AREA --- */
+  .service-area__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-medium);
+  }
+
+  .service-area__content {
+    max-width: 42rem;
+  }
+
+  .service-area__map {
+    min-height: 24rem;
+  }
 }
 
 /* ---------- MOBILE ---------- */
@@ -890,5 +970,15 @@ h3 {
     justify-content: center;
     text-align: center;
     padding: 0.75rem 0;
+  }
+
+  /* --- SERVICE AREA --- */
+  .service-area__map {
+    min-height: 22rem;
+    padding: var(--space-small);
+  }
+
+  .service-area__map-card {
+    padding: var(--space-small);
   }
 }
