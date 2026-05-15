@@ -5,11 +5,7 @@
 :root {
   /* Colours */
   --color-navy: #061335;
-  --color-orange: #ca6038;
-  --color-gold: #efb64d;
   --color-sky: #aedded;
-  --color-sky-light: #f6f9fc;
-  --color-white: #f9f9f9;
 
   --color-bg: #eef7f8;
   --color-bg-light: #f9f9f9;
@@ -20,14 +16,8 @@
   --color-text-light: #f9f9f9;
 
   --color-primary: #061335;
-  --color-secondary: #aedded;
   --color-accent: #ca6038;
   --color-highlight: #efb64d;
-
-  --color-border: rgba(6, 19, 53, 0.18);
-
-  /* Typography */
-  --font-primary: "Inter", Arial, Helvetica, sans-serif;
 
   /* Layout */
   --page-padding: 2rem;
@@ -61,7 +51,7 @@ body {
   margin: 0;
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-primary);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
 
@@ -282,7 +272,7 @@ h3 {
 
 .hero .btn--secondary {
   border-color: rgba(249, 249, 249, 0.55);
-  color: var(--color-white);
+  color: var(--color-text-light);
 }
 
 .hero__trust {
@@ -499,7 +489,7 @@ h3 {
 
   min-height: 18rem;
   padding: var(--space-medium);
-  border: 0.5px solid var(--color-border);
+  border: 0.5px solid rgba(6, 19, 53, 0.18);
   border-radius: 1.5rem;
 
   background: var(--color-bg-light);
@@ -868,20 +858,6 @@ h3 {
   }
 
   .why-us__content {
-    max-width: 100%;
-  }
-
-  .why-us__media {
-    justify-content: center;
-  }
-
-  /* Tablet/Mobile only fade-in section  */
-  .why-us__container {
-    grid-template-columns: 1fr;
-    gap: var(--space-small);
-  }
-
-  .why-us__content {
     max-width: 62rem;
   }
 
@@ -901,18 +877,8 @@ h3 {
 
   /* --- TRUST BAR --- */
   .trust-bar p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.65rem;
-
-    margin-bottom: 0;
     padding: 1.25rem 0.75rem;
-
-    color: var(--color-primary);
     font-size: clamp(0.85rem, 1.6vw, 1rem);
-    font-weight: 800;
-    text-align: center;
   }
 
   /* --- SERVICE AREA --- */
@@ -956,21 +922,6 @@ h3 {
 
   .hero__actions .btn {
     width: 80%;
-  }
-
-  /* --- WHY US --- */
-  .why-us__carousel {
-    min-height: 20rem;
-    padding: var(--space-medium);
-  }
-
-  .why-us__slide {
-    inset: var(--space-medium);
-  }
-
-  .why-us__dots {
-    left: var(--space-medium);
-    bottom: var(--space-medium);
   }
 
   /* --- SERVICES --- */

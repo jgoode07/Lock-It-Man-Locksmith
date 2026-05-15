@@ -60,4 +60,6 @@ whyUsPoints.forEach((point) => {
 /* ---------- FOOTER YEAR ---------- */
 const footerYear = document.getElementById("footer-year");
 
-footerYear.textContent = new Date().getFullYear();
+if (footerYear) {
+  footerYear.textContent = new Date().getFullYear();
+}
