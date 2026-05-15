@@ -56,3 +56,8 @@ const whyUsPointObserver = new IntersectionObserver(
 whyUsPoints.forEach((point) => {
   whyUsPointObserver.observe(point);
 });
+
+/* ---------- FOOTER YEAR ---------- */
+const footerYear = document.getElementById("footer-year");
+
+footerYear.textContent = new Date().getFullYear();
