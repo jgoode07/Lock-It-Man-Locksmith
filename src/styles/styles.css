@@ -130,6 +130,49 @@ h3 {
 }
 
 /* =========================================================
+   INTERACTIONS
+========================================================= */
+
+.btn {
+  transition:
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
+}
+
+.hero .btn--primary:hover,
+.emergency-cta .btn--primary:hover {
+  background: var(--color-text-light);
+  color: var(--color-primary);
+}
+
+.hero .btn--secondary:hover {
+  background: var(--color-text-light);
+  color: var(--color-primary);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 4px;
+}
+
+/* =========================================================
    SHARED LAYOUT
 ========================================================= */
 
@@ -501,12 +544,14 @@ h3 {
 
   transition:
     transform var(--transition-speed) ease,
-    border-color var(--transition-speed) ease;
+    border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 .service-card:hover {
   transform: translateY(-0.35rem);
   border-color: rgba(6, 19, 53, 0.32);
+  box-shadow: 0 1rem 2.5rem rgba(6, 19, 53, 0.08);
 }
 
 .service-card__icon {
