@@ -13,6 +13,26 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+/* ---------- ANCHOR SCROLL ---------- */
+
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+anchorLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (!targetElement) return;
+
+    event.preventDefault();
+
+    lenis.scrollTo(targetElement, {
+      offset: -80,
+      duration: 1.2,
+    });
+  });
+});
+
 /* ---------- WHY US CAROUSEL ---------- */
 
 const whyUsSlides = document.querySelectorAll(".why-us__slide");
