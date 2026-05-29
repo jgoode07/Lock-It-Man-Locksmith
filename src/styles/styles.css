@@ -867,6 +867,13 @@ button:focus-visible {
    MEDIA QUERIES
 ========================================================= */
 
+/* ---------- CARD STACKING ---------- */
+@media (max-width: 1024px) {
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ---------- TABLET ---------- */
 @media (max-width: 768px) {
   /* --- HEADER --- */
@@ -919,11 +926,6 @@ button:focus-visible {
     display: block;
   }
 
-  /* --- SERVICES --- */
-  .services__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   /* --- TRUST BAR --- */
   .trust-bar p {
     padding: 1.25rem 0.75rem;
@@ -952,6 +954,21 @@ button:focus-visible {
 
   .footer__brand {
     grid-column: 1 / -1;
+  }
+}
+
+/* ---------- SINGLE CARD STACKING ---------- */
+@media (max-width: 650px) {
+  .services__list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    text-align: center;
+    align-items: center;
+
+    max-width: 40rem;
+    margin-inline: auto;
   }
 }
 
