@@ -207,7 +207,7 @@ button:focus-visible {
   align-items: center;
 
   min-height: 6rem;
-  padding: 0 var(--page-padding);
+  padding: 0.5rem var(--page-padding);
 
   gap: var(--space-medium);
 }
@@ -220,7 +220,7 @@ button:focus-visible {
 
 .header__logo-image {
   height: 100%;
-  max-height: 5rem;
+  max-height: 6rem;
   width: auto;
   object-fit: contain;
 }
@@ -787,9 +787,23 @@ button:focus-visible {
   max-width: 22rem;
 }
 
-.footer__logo {
-  width: 5.5rem;
+.footer__logo-badge {
+  width: 6rem;
+  height: 6rem;
   margin-bottom: var(--space-small);
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--color-bg-light);
+  border-radius: 50%;
+}
+
+.footer__logo {
+  width: 100%;
+  margin-bottom: 0;
+
+  transform: translateX(1.5px) translateY(-4px);
 }
 
 .footer__tagline {
