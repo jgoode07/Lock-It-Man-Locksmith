@@ -845,20 +845,12 @@ button:focus-visible {
 }
 
 .footer__licence {
-  color: rgba(249, 249, 249, 0.82);
-  font-size: 0.85rem;
-  font-weight: 700;
   text-decoration: none;
-
   transition: color var(--transition-speed) ease;
 }
 
 .footer__licence:hover {
   color: var(--color-highlight);
-}
-
-.footer__rating {
-  color: rgba(249, 249, 249, 0.82);
 }
 
 .footer__heading {
